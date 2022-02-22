@@ -35,29 +35,29 @@ public class RoleFinder {
     }
 
     private static boolean multiSearch(String str1, List<String> str2) {
-        float founded = 0;
+        float found = 0;
         int max = 0;
 
         for (int i = 1; i <= str2.size(); i++)
             max += i;
 
         for (int i = 0; i < str2.size(); i++)
-            if (searchString(str1, str2.get(i))) founded += 8 - (i + 1);
+            if (searchString(str1, str2.get(i))) found += 8 - (i + 1);
 
-        return founded / max >= 0.5;
+        return found / max >= 0.5;
     }
 
     private static boolean multiSearch(String str1, List<String> str2, float confidence) {
-        float founded = 0;
+        float found = 0;
         int max = 0;
 
         for (int i = 1; i <= str2.size(); i++)
             max += i;
 
         for (int i = 0; i < str2.size(); i++)
-            if (searchString(str1, str2.get(i))) founded += 8 - (i + 1);
+            if (searchString(str1, str2.get(i))) found += 8 - (i + 1);
 
-        return founded / max >= confidence;
+        return found / max >= confidence;
     }
 
     /* gets role of string */
