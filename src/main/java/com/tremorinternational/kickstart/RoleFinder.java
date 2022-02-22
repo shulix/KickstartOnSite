@@ -68,7 +68,7 @@ public class RoleFinder {
         return null;
 
     }
-    /* get/set */
+    /* get/set roles for future use */
 
     /* gets list */
     public Map<String, List<String>> getRoleToKeywords() { return roleToKeywords; }
